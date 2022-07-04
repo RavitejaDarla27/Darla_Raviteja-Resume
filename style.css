@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Montserrat:wght@100;300;400&display=swap');
+
+/* Common Styels */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --primary-color: #ff7613;
+    --text-color: #727171;
+    --background-color: #070707;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: white;
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #727171;
+}
+
+/* Layouts */
+.container {
+    background-color: #070707;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.profile {
+    padding: 1.5rem;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin-bottom: 2.5rem;
+    gap: 3rem;
+}
+
+.profile_image {
+    max-width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.profile_image img{
+    object-fit: contain;
+    width: 100%;
+    border-radius: 6 ;
+}
+
+.profile_name {
+    margin-bottom: 1rem;
+
+}
+
+.profile_name .first_name {
+    font-weight: 200;
+    font-size: xx-large;
+    
+}
+
+.profile_name .last_name {
+    font-weight: 700;
+    font-size: xxx-large;
+    color: var(--primary-color);
+}
+
+.download {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-color);
+    border-radius: 50px;
+    font-family: inherit;
+}
+
+.download:hover {
+    background-color: var(--primary-color);
+    transition: 1s;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .profile {
+        padding: 2rem;
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .profile_image {
+        margin: 0;
+    }
+
+    .profile_name {
+        margin-top: 1rem;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.left_side_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.about_me p{
+    margin-top: 1rem;
+}
+
+.skills_list {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    line-height: 3ch;
+}
+
+.right_side_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.experience p{
+    margin: 1rem 0;
+}
+
+.experience .project_links {
+    line-height: 2;
+}
+
+.project_links a:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.interest_items {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.interest_items span {
+    display: block;
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 2.5rem;
+    }
+}
+
+hr {
+    width: 80%;
+    margin: 3rem auto;
+    border: none;
+    border-top: 2px solid rgba(128, 128, 128, 0.308);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.contact_detl {
+    margin: 10px 0;
+    line-height: 3ch;
+}
+
+.social_links {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 3ch;
+}
+.highlight:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.social_links a {
+    color: var(--text-color);
+}
+
+.icons {
+    width: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+.scroll_top {
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.295);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transform: scale(0.9);
+    transition: 0.3s ease-in-out transform;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll_top:hover {
+    transform: scale(1)
+}
+
+.chevrons-up {
+    width: 50%;
+    color: black;
+    pointer-events: none;
+}
